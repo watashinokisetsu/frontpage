@@ -13,13 +13,17 @@
       }
     }
     /* Стили для ASCII анимации */
-    .header-animation {
-      white-space: nowrap;
-      overflow: hidden;
-      animation: headerAnimation 5s linear infinite;
-    }
-    @keyframes headerAnimation {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
+.header-animation pre {
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 24px;
+  animation: jumpAnimation 2s linear infinite;
+}
+
+@keyframes jumpAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
 
