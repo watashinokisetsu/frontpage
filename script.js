@@ -1,17 +1,13 @@
-// Изменение содержимого при прокрутке страницы
-    window.addEventListener('scroll', function() {
-      var textGenerationQuery = document.getElementById('text-generation-query');
-      var imageGenerationQuery = document.getElementById('image-generation-query');
-      
-      // Примеры текста
-      if (window.scrollY < 500) {
-        textGenerationQuery.textContent = 'Пример запроса для генерации текста';
-        imageGenerationQuery.textContent = '...';
-      }
-      
-      // Примеры изображений
-      else {
-        textGenerationQuery.textContent = '...';
-        imageGenerationQuery.textContent = 'Пример запроса для генерации изображений';
-      }
-    });
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    const block1Height = document.getElementById('block1').offsetHeight;
+    const block2Height = document.getElementById('block2').offsetHeight;
+    const block3Height = document.getElementById('block3').offsetHeight;
+
+    if (currentScroll < block1Height) {
+        document.body.style.background = getComputedStyle(document.getElementById('block1')).background;
+    } else if (currentScroll < block1Height + block2Height) {
+        document.body.style.background = getComputedStyle(document.getElementById('block2')).background;
+    } else {
+        document.body.style.background = getComputedStyle(document.getElementById('block3')).background;
+   
