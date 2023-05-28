@@ -2,9 +2,8 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  margin-left: 200px;
-  margin-right: 200px;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 /* Остальные стили остаются без изменений */
