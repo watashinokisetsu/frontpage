@@ -11,7 +11,8 @@ body {
 }
 
 .block {
-    padding: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
     min-height: 100vh;
     width: 100%;
     background-size: cover;
@@ -31,12 +32,11 @@ body {
 
 .eighty {
     width: 80%;
-    padding-right: 200px;
 }
 
 .twenty {
     width: 20%;
-    padding-left: 200px;
+
 }
 
 #block3 {
