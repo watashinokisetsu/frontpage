@@ -19,6 +19,7 @@ body {
 #block2 {
     background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
     display: flex;
+    flex-direction: row;
 }
 
 .eighty {
@@ -31,4 +32,18 @@ body {
 
 #block3 {
     background: linear-gradient(to bottom, #84fab0, #8fd3f4);
+}
+
+@media screen and (max-width: 768px) {
+    .block {
+        padding: 50px 30px;
+    }
+    
+    #block2 {
+        flex-direction: column;
+    }
+
+    .eighty, .twenty {
+        width: 100%;
+    }
 }
