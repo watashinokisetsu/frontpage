@@ -1,16 +1,9 @@
-function setSectionBackgrounds() {
-  const sections = document.querySelectorAll('.section');
-  const scrollPosition = window.pageYOffset;
+window.addEventListener("scroll", function() {
+    const currentScroll = window.pageYOffset;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
 
-  sections.forEach(function(section, index) {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
+    const scrollFraction = currentScroll / maxScroll;
+    const hueRotation = scrollFraction * 360;
 
-    if (scrollPosition >= sectionTop - sectionHeight / 3) {
-      section.style.backgroundColor = `rgba(0, 0, 0, ${index / sections.length})`;
-    }
-  });
-}
-
-window.addEventListener('scroll', setSectionBackgrounds);
-window.addEventListener('resize', setSectionBackgrounds);
+    document.body.style.backgroundColor = `hsl(${hueRotation}, 60%, 70%)`;
+});
