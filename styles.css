@@ -1,8 +1,21 @@
 body {
     margin: 0;
-    padding: 0 150px; /* add 150px padding to left and right */
+    padding: 0 150px;
     font-family: Arial, sans-serif;
     color: #333;
+    transition: background-color 1s; /* add transition for smooth color change */
+}
+
+.color1 {
+    background-color: hsl(0, 50%, 80%);
+}
+
+.color2 {
+    background-color: hsl(120, 50%, 80%);
+}
+
+.color3 {
+    background-color: hsl(240, 50%, 80%);
 }
 
 header, footer {
@@ -28,13 +41,13 @@ nav ul li a {
 }
 
 main {
-    min-height: 200vh; /* to allow scrolling */
+    min-height: 200vh;
 }
 
 section {
     padding: 50px 0;
     text-align: center;
-    min-height: 100vh; /* each section will take at least the full viewport height */
+    min-height: 100vh;
 }
 
 section h2 {
